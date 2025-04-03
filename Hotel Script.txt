@@ -1,0 +1,40 @@
+
+
+
+   USE HotelDB;
+
+CREATE TABLE guests (
+    GuestID INT NOT NULL PRIMARY KEY,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100),
+    Phone VARCHAR(100)
+);
+
+
+CREATE TABLE rooms (
+    RoomID INT NOT NULL PRIMARY KEY,
+    RoomNumber INT,
+    RoomType VARCHAR(100),
+    Price INT,
+    Status VARCHAR(100) 
+);
+
+
+CREATE TABLE bookings (
+    BookingID INT NOT NULL PRIMARY KEY,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    RoomChoice VARCHAR(100),
+    CheckInDate DATE NOT NULL,
+    CheckOutDate DATE NOT NULL
+);
+
+
+CREATE TABLE payments (
+    PID INT NOT NULL PRIMARY KEY,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    Amount INT,
+    PaymentMethod VARCHAR(100)
+);
